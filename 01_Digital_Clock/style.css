@@ -1,0 +1,68 @@
+/* Global styles - Sets up the basic page layout */
+body{
+    background-color: #212121;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+}
+
+/* Main container styling - Creates the clock's background box */
+.container{
+    background-color: #2f2d2d;
+    height: 250px;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 8px 10px black ;
+}
+
+/* Flexbox container for vertical alignment of elements */
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clock text header styling */
+.text-clock{
+    color: white;
+    padding: 10px;
+}
+
+/* Button styling - Controls the appearance of the enter button */
+.enter-btn{
+    padding: 8px 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(66, 55, 153);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: large;
+}
+
+/* Button hover effect */
+.enter-btn:hover{
+    background-color: rgb(47, 31, 166);
+}
+
+/* Time display styling - Shows the actual clock time */
+.show-time{
+    background-color: #212121;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 10px white;
+}
+
+/* Utility class for hiding elements (currently commented out) */
+/* .hidden{
+    display: none;
+} */

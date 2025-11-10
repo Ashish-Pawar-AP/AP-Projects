@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <!-- Styles for the color changer -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            /* padding: 50px; */
+            transition: background-color 0.5s; /* Smooth color transition */
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+        /* Container for the color selector */
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        /* Dropdown menu styling */
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        /* Individual option styling */
+        select option {
+            font-size: 16px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container for the color changer -->
+    <div class="container">
+        <h1>Background Color Changer</h1>
+        <!-- Color selection dropdown -->
+        <select id="colorSelect" title="colorSelect">
+            <option value="">Select a color</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="purple">Purple</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="gray">Gray</option>
+        </select>
+
+        <!-- JavaScript for handling color changes -->
+        <script>
+            // Get the select element
+            const colorSelect = document.getElementById('colorSelect');
+
+            // Add event listener for color changes
+            colorSelect.addEventListener('change', function() {
+                document.body.style.backgroundColor = this.value;
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        background: linear-gradient(to right, #8309ac, #4110ac, #0b74dd);
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 15px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      h2 {
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+      #text {
+        padding: 8px 15px;
+        background: transparent;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        color: white;
+        margin-bottom: 20px;
+        font-size: 17px;
+      }
+      #text::placeholder {
+        color: wheat;
+      }
+      #checkBtn {
+        padding: 8px 30px;
+        background: transparent;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        color: whitesmoke;
+        font-size: 15px;
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+      #checkBtn:hover {
+        transform: scale(1.1);
+        transition: 1s;
+      }
+      #displayAns {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Palindrome Checker</h2>
+      <input id="text" type="text" placeholder="Type your text" />
+      <button id="checkBtn">Check</button>
+      <p id="displayAns">Ashish</p>
+    </div>
+    <script>
+      const text = document.getElementById("text");
+      const checkBtn = document.getElementById("checkBtn");
+      const displayAns = document.getElementById("displayAns");
+
+      checkBtn.addEventListener("click", () => {
+        const reverse = text.value.split("").reverse().join("");
+
+        if (text.value === reverse) {
+          displayAns.innerHTML = `This word is Palindrome`;
+        } else {
+          displayAns.innerHTML = `This word is not Palindrome`;
+        }
+      });
+    </script>
+  </body>
+</html>

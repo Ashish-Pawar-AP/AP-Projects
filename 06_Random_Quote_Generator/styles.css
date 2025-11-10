@@ -1,0 +1,118 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  background: #a770ef; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fdb99b,
+    #cf8bf3,
+    #a770ef
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fdb99b,
+    #cf8bf3,
+    #a770ef
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 20px;
+  max-width: 500px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
+}
+
+.quote-containt {
+  font-size: 20px;
+  text-align: center;
+  /* word-break: break-all; */
+}
+
+.quote i:first-child {
+  margin: 3px 10px 0 0;
+}
+
+.quote i:last-child {
+  margin: 0 0 3px 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.author {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-style: italic;
+}
+
+.author span:first-child {
+  margin: -7px 5px 0 0;
+  font-family: monospace;
+}
+
+.buttons {
+  border-top: 1px solid;
+  margin-top: 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.features ul {
+  display: flex;
+}
+.features ul li {
+  list-style: none;
+  margin: 0 5px;
+  height: 45px;
+  width: 45px;
+  border: 2px solid #5372f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.new-quoteBtn{
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    background: #5372f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.new-quoteBtn:hover{
+    background: #3d61ef;
+}
