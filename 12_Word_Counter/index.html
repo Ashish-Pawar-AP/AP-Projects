@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Counter</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        max-width: 90%;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        color: #333;
+        font-weight: 600;
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        resize: none;
+        outline: none;
+        margin-bottom: 15px;
+        transition: 0.3s ease;
+      }
+
+      textarea:focus {
+        border-color: #66a6ff;
+        box-shadow: 0 0 5px rgba(102, 166, 255, 0.5);
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .stats span {
+        background: #f0f0f0;
+        padding: 5px 12px;
+        border-radius: 8px;
+        min-width: 100px;
+      }
+
+      button {
+        background-color: #4c84ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #366ce0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Word Counter ✍️</h2>
+      <textarea placeholder="Start typing here..." id="text"></textarea>
+
+      <div class="stats">
+        <span id="word-counter">Words: 0</span>
+        <span id="characters-counter">Characters: 0</span>
+      </div>
+
+      <button id="clearText">Clear</button>
+    </div>
+    <script>
+      const getText = document.getElementById("text");
+      const displayWordCount = document.getElementById("word-counter");
+      const displayCharactersCount =
+        document.getElementById("characters-counter");
+      const clearBtn = document.getElementById("clearText");
+
+      getText.addEventListener("input", () => {
+        displayCharactersCount.innerHTML = `Words: ${getText.value.length}`;
+
+        const word = getText.value
+          .split(/\s+/)
+          .filter((word) => word.length > 0);
+
+        displayWordCount.innerHTML = `Characters: ${word.length}`;
+      });
+
+      clearBtn.addEventListener("click", clear);
+
+      function clear() {
+        getText.value = "";
+        displayCharactersCount.textContent = `Words: 0`;
+        displayWordCount.textContent = `Characters: 0`;
+      }
+    </script>
+  </body>
+</html>
