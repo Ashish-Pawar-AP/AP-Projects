@@ -1,0 +1,25 @@
+/* .app {
+  width: 400px;
+  margin: 50px auto;
+  font-family: Arial;
+  text-align: center;
+}
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  background: #eee;
+  border-radius: 5px;
+} */
